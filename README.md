@@ -1,15 +1,15 @@
-## 깃 테스트 프로젝트
+## Readme Info
 
 3D Flappy Bird 
 
-## 게임 기능 기획
+## Game Developement Plan
 
-장애물 오브젝트 Pulling 기법
+- Object pulling
+- Collision
+- Sound
+- Key Input
 
-## 기본 개념 정리
-
-
-## 추가 정보
+## About Me
 <picture>
   <source
     srcset="https://github-readme-stats.vercel.app/api?username=KangminLeo&show_icons=true&theme=dark"
