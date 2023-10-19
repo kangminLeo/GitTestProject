@@ -1,6 +1,6 @@
 ## Readme Info
 
-3D Flappy Bird 
+3D Flappy Bird Implementation
 
 ## Commit Type
 
