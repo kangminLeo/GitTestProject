@@ -5,11 +5,17 @@
 ## Commit Type
 
 feat : Add new functions
+
 fix : Fix bugs
+
 docs : Edit documents
+
 style : Code Formatting, semi-colon omission, not code changing
+
 refactor : Code refactoring
+
 test : Test code, add refactoring test code
+
 chore : Fix build works, fix package manager
 
 ## Commit Example
