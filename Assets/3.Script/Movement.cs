@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public float speed = 5f;
     private Rigidbody rigidBody;
 
     float x_Axis, z_Axis;
@@ -23,7 +24,13 @@ public class Movement : MonoBehaviour
         x_Axis = Input.GetAxis("Horizontal");
         z_Axis = Input.GetAxis("Vertical");
 
-        rigidBody.velocity = new Vector3(x_Axis, -1f, z_Axis); 
+        float fallSpeed = rigidBody.velocity.y;
 
+        Vector3 velocity = new Vector3(x_Axis, 0, z_Axis);
+
+        velocity *= speed; 
+        velocity.y *= fallSpeed; // Initialize gravity
+
+        rigidBody.velocity = velocity; 
     }
 }
