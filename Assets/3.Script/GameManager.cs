@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private static GameManager instance;
+    public static int Score;
+    public static bool isAlive = true;
+    public static GameManager Instance
     {
-        
+        get
+        {
+            if(!instance)
+            {
+                instance = FindObjectOfType<GameManager>();
+            }
+
+            if(instance == null)
+            {
+                Debug.Log("싱글톤이 존재하지 않습니다.");
+            }
+
+            return instance;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else if(instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+
     }
+
+    
+
 }
